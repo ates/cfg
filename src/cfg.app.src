@@ -1,0 +1,6 @@
+{application, cfg, [
+    {description, "CFG"},
+    {vsn, semver},
+    {applications, [kernel, stdlib, jsx, yamerl]},
+    {mod, {cfg, []}}
+]}.

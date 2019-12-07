@@ -1,0 +1,28 @@
+datasources:
+  - hep:
+      transport: udp
+      listen_ip: 127.0.0.1
+      listen_port: 9060
+      acceptors: 10
+
+  - hep:
+      transport: tcp
+      listen_ip: 127.0.0.1
+      listen_port: 9061
+      acceptors: 10
+
+  - pcap:
+      interface: lo
+      ports:
+        - 5060
+        - 5061
+
+codec:
+  debug: true
+
+storage:
+  path: /tmp/xhep
+  sync: false
+  rotate_each: 10
+  rotate_after: 60
+  max_files: 9999
